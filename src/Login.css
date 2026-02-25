@@ -61,18 +61,26 @@ body{
     outline: none;
 }
 
+
 @media (max-width: 768px) {
 
-  .form1 {
-    grid-template-columns: 1fr;  /* single column */
+.form1 {
+    grid-template-columns: 1fr;   /* stack everything */
+    text-align: center;
   }
 
-  .form1 label {
-    text-align: left;
+.form1 label {
+    font-size: 16px;      /* smaller text */
+    justify-self: center; /* center label */
   }
 
-  .loginInput {
+.loginInput {
     width: 100%;
+    font-size: 16px;      /* smaller input text */
+  }
+
+.MainLogin h1 {
+    font-size: 32px;      /* smaller Login heading */
   }
 
 }
