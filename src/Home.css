@@ -85,15 +85,15 @@ z-index: 1000;
     right: 0;
     bottom: 0;
     z-index: 1;
-    overflow: hidden;
 }
 .bgImage img {
-    width: 450px;        /* keep base size */
+    /* width: 450px;        
     transform: scale(1.4);
-    transform-origin: bottom right;
+    transform-origin: bottom right; */
+    width: clamp(300px, 35vw, 550px);
+    transform: none;
     opacity: 0.5;
-    transition: 0.3s ;
-    pointer-events: none;   /* image will never block clicks */
+    transition:  0.3s ease;
 }
 .bgImage img:hover{
     opacity: 1;
