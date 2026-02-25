@@ -47,28 +47,26 @@
 
 @media (max-width: 768px) {
 
-  .form2 {
-    grid-template-columns: 1fr;   /* single column */
-    text-align: center;
-    justify-items: center;
+  .form1 {
+    grid-template-columns: 1fr;   /* single column on mobile */
   }
 
-  .form2 label {
-    font-size: 16px;
-    justify-self: center;
+  .form1 label {
+    margin-top: 10px;
   }
 
-  .SignupInput {
+  .loginInput {
     width: 100%;
-    font-size: 16px;
   }
 
-  .signupForm h1 {
-    font-size: 32px;
+  .input2 {
+    grid-column: span 1;   /* fix button layout for mobile */
+    width: 100%;
   }
 
-   .btnSub {
-    grid-column: span 1;   /* reset for single column */
+}
+@media (max-width: 768px) {
+  .form1 {
+    gap: 12px;
   }
-
 }
