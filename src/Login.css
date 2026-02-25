@@ -60,3 +60,19 @@ body{
     border: none;
     outline: none;
 }
+
+@media (max-width: 768px) {
+
+  .form1 {
+    grid-template-columns: 1fr;  /* single column */
+  }
+
+  .form1 label {
+    text-align: left;
+  }
+
+  .loginInput {
+    width: 100%;
+  }
+
+}
