@@ -61,7 +61,10 @@
 
   .btnSub {
     grid-column: 1 / -1;
-    width: 100%;
+    width: 50%;
+  }
+  .loginLink{
+    font-size: 20px;
   }
 
 }

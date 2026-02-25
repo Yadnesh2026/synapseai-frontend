@@ -59,7 +59,7 @@ export default function Signup({ setUser }) {
         <button type="submit" className="btnSub">Signup</button>
       </form>
 
-      <p>
+      <p className="loginLink">
         Already have account? <Link to="/login">Login</Link>
       </p>
     </div>
