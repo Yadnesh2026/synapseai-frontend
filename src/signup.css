@@ -44,29 +44,24 @@
     border: none;
     outline: none;
 }
-
 @media (max-width: 768px) {
 
-  .form1 {
-    grid-template-columns: 1fr;   /* single column on mobile */
+  .form2 {
+    grid-template-columns: 1fr;
   }
 
-  .form1 label {
-    margin-top: 10px;
+  .form2 label {
+    grid-column: 1 / -1;
   }
 
-  .loginInput {
+  .SignupInput {
+    grid-column: 1 / -1;
     width: 100%;
   }
 
-  .input2 {
-    grid-column: span 1;   /* fix button layout for mobile */
+  .btnSub {
+    grid-column: 1 / -1;
     width: 100%;
   }
 
-}
-@media (max-width: 768px) {
-  .form1 {
-    gap: 12px;
-  }
 }
