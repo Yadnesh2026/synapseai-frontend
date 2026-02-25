@@ -140,24 +140,60 @@ border-radius: 10px;
 }
 
 /* 📱 MOBILE ONLY FIX */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
   .chatInputWrapper {
     width: 100%;
     left: 0;
-    transform: none;     /* remove desktop centering */
-    padding: 0 12px;     /* keep inside screen */
+    transform: none;   
+    padding: 0 12px;     
     box-sizing: border-box;
   }
 
   .chatInput {
     width: 100%;
     box-sizing: border-box;
-    padding-right: 45px;   /* space for send icon */
+    padding-right: 45px;  
   }
 
   .sendBtn {
-    right: 20px;    /* keep icon inside mobile screen */
+    right: 20px;    
+  }
+
+} */
+
+@media (max-width: 768px) {
+
+  .chatInputWrapper {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+
+  .chatInputWrapper {
+    position: fixed;
+  }
+
+  .chatInputWrapper {
+    display: flex;
+    align-items: center;
+    position: fixed;
+  }
+
+  .chatInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 50px 14px 20px; /* space for icon */
+  }
+
+  .sendBtn {
+    position: absolute;
+    right: 30px;   /* bring icon inside */
+    bottom: 50%;
+    transform: translateY(50%);
   }
 
 }
