@@ -26,6 +26,7 @@
     font-weight: bold;
     padding: 0 16px;
     box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .navbar span{
@@ -42,6 +43,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    flex-shrink: 0;
     /* bottom: 0; */
 }
 
@@ -155,6 +157,9 @@ border-radius: 10px;
     .Name {
     padding-left: 42px !important; /* ✅ clears the hamburger space */
 }
+.chatwindow {
+        height: 100svh;  /* ✅ svh instead of dvh - fixes mobile browser bar issue */
+    }
 
 }
 
