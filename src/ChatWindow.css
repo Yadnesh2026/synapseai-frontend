@@ -144,7 +144,10 @@ border-radius: 10px;
 
 @media (max-width: 768px) {
     .info{
-        font-size: 10px;
+        font-size: 7px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
     }
 
 }
