@@ -31,7 +31,7 @@ export default function Signup({ setUser }) {
 
   return (
     <div className="signupForm">
-      <h1>Signup</h1>
+      <h1>SignUp</h1>
 
       <form onSubmit={handleSignup} className="form2">
         <label>Name :</label>
@@ -56,7 +56,7 @@ export default function Signup({ setUser }) {
           onChange={(e)=>setPassword(e.target.value)}
           className="SignupInput"
         />
-        <button type="submit" className="btnSub">Signup</button>
+        <button type="submit" className="btnSub">SignUp</button>
       </form>
 
       <p className="loginLink">
