@@ -84,7 +84,9 @@ body{
     grid-column: span 1;   /* reset for mobile */
     width: 50%;
     margin-top: 2rem;
-
+  }
+  .way{
+    font-size: 10px;
   }
 
 }
