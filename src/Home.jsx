@@ -21,10 +21,15 @@ export default function Home({setUser}){
             </motion.div>
 
             <motion.div className="bgImage"
-            initial={{opacity:0,x:200}}
-            animate={{opacity:0.45,x:0}}
+            initial={{x:200}}
+            animate={{x:0}}
             transition={{duration:1.5}}>
-            <img src="sss.png" />
+            <motion.img 
+                 src="sss.png"className="bgImg"
+                    animate={{opacity:0.45}}
+                    whileHover={{opacity:1, scale:1.05}}  
+                    transition={{duration:0.3}}
+                    />
             </motion.div>
 
             <motion.div className="HomeMain">

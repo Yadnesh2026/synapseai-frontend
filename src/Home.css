@@ -92,13 +92,19 @@ z-index: 1000;
     transform-origin: bottom right; */
     width: clamp(300px, 35vw, 550px);
     transform: none;
-    opacity: 0.5;
+    opacity: 0.45;
     transition:  0.3s ease;
 }
-.bgImage img:hover{
-    opacity: 1;
+.bgImg {
+    width: clamp(300px, 35vw, 550px);
+    opacity: 0.45;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+.bgImg:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
 @media (max-width: 768px) {
 
   .logo {
