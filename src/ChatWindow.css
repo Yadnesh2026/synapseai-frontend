@@ -153,7 +153,7 @@ border-radius: 10px;
         justify-content: center;
     }
     .Name {
-    padding-left: 55px !important; /* ✅ clears the hamburger space */
+    padding-left: 42px !important; /* ✅ clears the hamburger space */
 }
 
 }
