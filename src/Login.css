@@ -82,8 +82,9 @@ body{
   /* ⭐ IMPORTANT FIX */
   .input2 {
     grid-column: span 1;   /* reset for mobile */
-    width: 100%;
+    width: 50%;
     margin-top: 2rem;
+
   }
 
 }
