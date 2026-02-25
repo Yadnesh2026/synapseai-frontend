@@ -52,8 +52,8 @@
 
 .input{
     height: 30px;
-    /* width: 100%; */
-    /* max-width: 800px; */
+    width: 100%;
+    max-width: 800px;
     background-color: #1e1e1e;
     border: 1px solid #333;
     border-radius: 30px;
@@ -139,20 +139,25 @@ border-radius: 10px;
     border-radius: 6px;
 }
 
+/* 📱 MOBILE ONLY FIX */
 @media (max-width: 768px) {
-    .navbar {
-        padding-left: 25px;  /* push name right to avoid hamburger overlap */
-    }
-      .userInput{
-        width: 90%;
-        background: rgba(255,255,255,0.05);
-        border-radius: 30px;
-        padding: 8px 12px;
-        backdrop-filter: blur(8px);
-    }
-.input{
-        background: transparent;
-        border: none;
-    }
+
+  .chatInputWrapper {
+    width: 100%;
+    left: 0;
+    transform: none;     /* remove desktop centering */
+    padding: 0 12px;     /* keep inside screen */
+    box-sizing: border-box;
+  }
+
+  .chatInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 45px;   /* space for send icon */
+  }
+
+  .sendBtn {
+    right: 20px;    /* keep icon inside mobile screen */
+  }
 
 }
