@@ -8,7 +8,7 @@ function Sidebar2({user, open, setOpen}){
 
     const getAllThreads =async()=>{
         try{
-            const res =await fetch("http://localhost:8111/api/thread",{credentials:"include"});
+            const res =await fetch("https://synapseai-backend-production.up.railway.app/api/thread",{credentials:"include"});
             const res2 =await res.json();
             const filter = res2.map(thread=>({thread:thread.threadId,
                                             title:thread.title
@@ -37,7 +37,7 @@ function Sidebar2({user, open, setOpen}){
     setCurrThreadId(newThreadId);
     setOpen(false);   // ⭐ ADD THIS LINE HERE
     try {
-        const response = await fetch(`http://localhost:8111/api/thread/${newThreadId}`,{credentials:"include"});
+        const response = await fetch(`https://synapseai-backend-production.up.railway.app/api/thread/${newThreadId}`,{credentials:"include"});
         const data = await response.json();
 
         setPrevChats(data);   //show old messages
@@ -58,7 +58,7 @@ function Sidebar2({user, open, setOpen}){
     //Delete Thread
     let deleteThread =async(threadId)=>{
         try{
-            const res =await fetch(`http://localhost:8111/api/thread/${threadId}`,{method:"DELETE",credentials:"include"})
+            const res =await fetch(`https://synapseai-backend-production.up.railway.app/api/thread/${threadId}`,{method:"DELETE",credentials:"include"})
             const res2 =await res.json();
             console.log(res2);
 

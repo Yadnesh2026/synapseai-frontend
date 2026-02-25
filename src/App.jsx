@@ -22,7 +22,7 @@ function App() {
   const [open,setOpen] = useState(false);
   
 useEffect(()=>{
-    fetch("http://localhost:8111/api/current-user",{
+    fetch("https://synapseai-backend-production.up.railway.app/api/current-user",{
     credentials:"include"
     })
     .then(res => res.json())
@@ -83,7 +83,7 @@ return(
 
           <div className="chatLayout">
             {/* Humburgur */}
-          <button className='humburger' onClick={() => setOpen(prev => !prev)}><i class="fa-solid fa-bars"></i></button>
+          <button className='humburger' onClick={() => setOpen(prev => !prev)}><i className="fa-solid fa-bars"></i></button>
           {/* sidebar */}
               <Sidebar user={user} open={open} setOpen={setOpen}/>
 

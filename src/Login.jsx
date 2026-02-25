@@ -11,7 +11,7 @@ export default function Login({ setUser }) {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:8111/api/login",{
+    const res = await fetch("https://synapseai-backend-production.up.railway.app/api/login",{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
       credentials:"include",

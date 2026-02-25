@@ -27,7 +27,7 @@ export default function ChatWindow(){
         };
 
         try{
-            const response  = await fetch("http://localhost:8111/api/chat",{
+            const response  = await fetch("https://synapseai-backend-production.up.railway.app/api/chat",{
                             ...options,
                             credentials:"include"
                             });
@@ -66,7 +66,7 @@ export default function ChatWindow(){
     }
     //handle logout
     let logout =async ()=>{
-        await fetch("http://localhost:8111/api/logout",{
+        await fetch("https://synapseai-backend-production.up.railway.app/api/logout",{
             method:"POST",
             credentials:"include"
         });

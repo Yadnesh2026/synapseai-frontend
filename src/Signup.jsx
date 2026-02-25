@@ -12,7 +12,7 @@ export default function Signup({ setUser }) {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:8111/api/signup",{
+    const res = await fetch("https://synapseai-backend-production.up.railway.app/api/signup",{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
       credentials:"include",
