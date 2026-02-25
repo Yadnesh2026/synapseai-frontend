@@ -9,6 +9,7 @@ import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import Login from "./Login";
 import Signup from "./Signup";
+import logo from "/public/Logo.png"
 
 function App() {
   const [propmt,setPropmt]=useState("");
@@ -36,9 +37,13 @@ useEffect(()=>{
 
    console.log("USER:", user);
 
-   if(loading){
-      return <div>Loading...</div>
-    }
+if(loading){
+    return (
+        <div className="appLoader">
+            <span>LOADING</span>
+        </div>
+    )
+}
 
 
 
@@ -83,7 +88,7 @@ return(
 
           <div className="chatLayout">
             {/* Humburgur */}
-          <button className='humburger' onClick={() => setOpen(prev => !prev)}><i className="fa-solid fa-bars"></i></button>
+          <button className={`humburger ${open ? 'hide' : ''}`} onClick={() => setOpen(prev => !prev)}><i className="fa-solid fa-bars"></i></button>
           {/* sidebar */}
               <Sidebar user={user} open={open} setOpen={setOpen}/>
 
