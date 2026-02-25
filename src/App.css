@@ -1,0 +1,40 @@
+* {
+    color: #ececec;
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', 'sans-serif';
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.humburger {
+    position: fixed;
+    top: 27px;
+    left: 12px;
+    z-index: 3000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background: rgba(0,0,0,0.4);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+/* hide hamburger on desktop */
+@media (min-width: 769px) {
+    .humburger {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .chatwindow {
+        margin-left: 320px;
+    }
+}

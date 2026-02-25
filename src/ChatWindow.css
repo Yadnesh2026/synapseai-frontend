@@ -1,0 +1,146 @@
+.chatwindow{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.chatArea{
+    flex: 1;           /* pushes input down */
+    overflow-y: auto;  /* scroll chat */
+    width: 100%;
+}
+.emptyState{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.navbar span{
+    padding: 10px;
+    margin: 25px;
+}
+
+
+.chatInput{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.userInput{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 800px;
+    gap: 10px;
+}
+
+.input{
+    height: 30px;
+    width: 100%;
+    max-width: 800px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 30px;
+    padding: 20px 20px;
+}
+.info{
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+#submit{
+    
+    padding-top: 0;         /* remove the padding-top that's pushing it down */
+    margin-left: 5px;         /* gap handles spacing now */
+    font-size: 20px;
+    cursor: pointer;
+    flex-shrink: 0;         /* prevent it from shrinking */
+}
+
+#submit:hover{
+    opacity: 0.5;
+}
+.chatArea{
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.loaderWrapper{
+    display: flex;
+    justify-content: center;  /* horizontal center */
+    margin: 20px 0;
+}
+.chatArea::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Scrollbar background */
+.chatArea::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Scrollbar handle */
+.chatArea::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 10px;
+}
+
+/* Hover effect */
+.chatArea::-webkit-scrollbar-thumb:hover {
+    background: #666;
+}
+
+.fa-user{cursor: pointer;}
+
+.dropDown{
+position:absolute;
+top: 4rem;
+right: 1rem;
+width: 150px;
+background-color: #323232;
+padding: 0.3rem 0.5rem;
+border-radius: 5px;
+text-align: left;
+z-index: 1000;
+box-shadow: 0px 2px 8px rgba(0,0,0,1);
+border-radius: 10px;
+}
+.dropDownItem{
+    font-size: 0.8rem;
+    margin: 0.3rem 0rem ;
+    padding: 0.5rem;
+    
+}
+.dropDownItem i{
+    font-size: 0.9rem;
+    margin: 0.3rem 0rem;
+    padding-right: 0.7rem;
+    cursor: pointer;
+}
+.dropDownItem:hover{
+    background-color: rgba(180,180,180,0.1);
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding-left: 25px;  /* push name right to avoid hamburger overlap */
+    }
+
+    
+}
