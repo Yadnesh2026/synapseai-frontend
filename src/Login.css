@@ -47,6 +47,17 @@ body{
     background: #020617;
     transition: all 0.4s ease;
 }
+
+.input2:disabled {
+    cursor: wait;
+    opacity: 0.72;
+    box-shadow: 0 0 18px rgba(37,99,235,0.24);
+}
+
+.input2:disabled:hover {
+    background: linear-gradient(135deg, #334155, #1e293b);
+}
+
 .loginInput{
     font-family: 'Montserrat', sans-serif;
     

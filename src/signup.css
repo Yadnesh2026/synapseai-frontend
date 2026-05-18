@@ -33,6 +33,13 @@
     grid-column: span 2;   /* already told maybe */
     justify-self: center;  /* centers inside grid */
 }
+
+.btnSub:disabled {
+    cursor: wait;
+    opacity: 0.72;
+    box-shadow: 0 0 18px rgba(37,99,235,0.24);
+}
+
 .SignupInput{
     font-family: 'Montserrat', sans-serif;
     padding: 10px 20px;
