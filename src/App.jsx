@@ -10,6 +10,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import Login from "./Login";
 import Signup from "./Signup";
 import logo from "/public/Logo.png"
+import { apiUrl } from "./api";
 
 function App() {
   const [propmt,setPropmt]=useState("");
@@ -23,7 +24,7 @@ function App() {
   const [open,setOpen] = useState(false);
   
 useEffect(()=>{
-    fetch("https://synapseai-backend-production.up.railway.app/api/current-user",{
+    fetch(apiUrl("/api/current-user"),{
     credentials:"include"
     })
     .then(res => res.json())
@@ -31,6 +32,11 @@ useEffect(()=>{
       if(data.loggedIn){
           setUser(data.name);
       }
+    })
+    .catch(err => {
+      console.log(err);
+    })
+    .finally(() => {
       setLoading(false);
     });
   },[])

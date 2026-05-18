@@ -2,13 +2,14 @@ import "./Sidebar2.css"
 import {  useContext, useEffect } from "react";
 import { MyContext } from "./MyContext";
 import {v1 as uuidv1} from "uuid";
+import { apiUrl } from "./api";
 
 function Sidebar2({user, open, setOpen}){
     const {allthreats,setAllThreats,currThreadId,setNewChats,setPropmt,setReplay,setCurrThreadId,setPrevChats}=useContext(MyContext);
 
     const getAllThreads =async()=>{
         try{
-            const res =await fetch("https://synapseai-backend-production.up.railway.app/api/thread",{credentials:"include"});
+            const res =await fetch(apiUrl("/api/thread"),{credentials:"include"});
             const res2 =await res.json();
             const filter = res2.map(thread=>({thread:thread.threadId,
                                             title:thread.title
@@ -37,7 +38,7 @@ function Sidebar2({user, open, setOpen}){
     setCurrThreadId(newThreadId);
     setOpen(false);   // ⭐ ADD THIS LINE HERE
     try {
-        const response = await fetch(`https://synapseai-backend-production.up.railway.app/api/thread/${newThreadId}`,{credentials:"include"});
+        const response = await fetch(apiUrl(`/api/thread/${newThreadId}`),{credentials:"include"});
         const data = await response.json();
 
         setPrevChats(data);   //show old messages
@@ -58,7 +59,7 @@ function Sidebar2({user, open, setOpen}){
     //Delete Thread
     let deleteThread =async(threadId)=>{
         try{
-            const res =await fetch(`https://synapseai-backend-production.up.railway.app/api/thread/${threadId}`,{method:"DELETE",credentials:"include"})
+            const res =await fetch(apiUrl(`/api/thread/${threadId}`),{method:"DELETE",credentials:"include"})
             const res2 =await res.json();
             console.log(res2);
 

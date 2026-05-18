@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Login.css"
+import { apiUrl } from "./api";
 
 export default function Login({ setUser }) {
 
@@ -11,7 +12,7 @@ export default function Login({ setUser }) {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("https://synapseai-backend-production.up.railway.app/api/login",{
+    const res = await fetch(apiUrl("/api/login"),{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
       credentials:"include",

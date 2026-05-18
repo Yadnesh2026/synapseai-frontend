@@ -4,6 +4,7 @@ import { MyContext } from "./MyContext"
 import { useContext, useState,useEffect } from "react"
 import {RingLoader} from "react-spinners"
 import { useNavigate } from "react-router-dom";
+import { apiUrl } from "./api";
 
 export default function ChatWindow(){
     const {propmt,setPropmt,replay,setReplay,currThreadId,prevChats,setPrevChats,setUser} = useContext(MyContext);
@@ -27,7 +28,7 @@ export default function ChatWindow(){
         };
 
         try{
-            const response  = await fetch("https://synapseai-backend-production.up.railway.app/api/chat",{
+            const response  = await fetch(apiUrl("/api/chat"),{
                             ...options,
                             credentials:"include"
                             });
@@ -66,7 +67,7 @@ export default function ChatWindow(){
     }
     //handle logout
     let logout =async ()=>{
-        await fetch("https://synapseai-backend-production.up.railway.app/api/logout",{
+        await fetch(apiUrl("/api/logout"),{
             method:"POST",
             credentials:"include"
         });

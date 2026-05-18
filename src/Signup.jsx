@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./signup.css"
+import { apiUrl } from "./api";
 
 export default function Signup({ setUser }) {
 
@@ -12,7 +13,7 @@ export default function Signup({ setUser }) {
   const handleSignup = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("https://synapseai-backend-production.up.railway.app/api/signup",{
+    const res = await fetch(apiUrl("/api/signup"),{
       method:"POST",
       headers:{ "Content-Type":"application/json" },
       credentials:"include",
