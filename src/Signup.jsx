@@ -26,7 +26,7 @@ export default function Signup({ setUser }) {
       setUser(data.name);
       navigate("/chat");
     } else {
-      alert("Signup failed");
+      alert(data.message || "Signup failed");
     }
   }
 
