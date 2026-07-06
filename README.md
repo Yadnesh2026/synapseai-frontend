@@ -22,6 +22,8 @@ https://github.com/Yadnesh2026/synapseai-frontend
 
 ---
 
+
+
 # 🛠️ Tech Stack
 
 ## Frontend
