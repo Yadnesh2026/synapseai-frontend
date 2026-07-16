@@ -9,8 +9,6 @@ https://github.com/Yadnesh2026/synapseai-frontend
 
 ---
 
-
-
 # ✨ Features
 
 - 🤖 AI-powered conversational interface
