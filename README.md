@@ -21,9 +21,6 @@ https://github.com/Yadnesh2026/synapseai-frontend
 - 🧠 Intelligent AI integration support
 
 ---
-
-
-
 # 🛠️ Tech Stack
 
 ## Frontend
