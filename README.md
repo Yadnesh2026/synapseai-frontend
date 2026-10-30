@@ -1,4 +1,4 @@
-# 🚀 Synapse AI
+# 🚀 Synapse AI - Frontend
 
 Synapse AI is a modern AI-powered conversational web application designed to deliver intelligent, real-time interactions through a sleek and responsive user interface.
 
